@@ -5,6 +5,7 @@ val AVAILABLE_STEED: List<String> = listOf("dragon", "minotaur")
 val AVAILABLE_DRINKS: List<String> = listOf("wine", "mead", "lacroix")
 
 fun main(args: Array<String>) {
+
     var experiencePoints = 5
     var availableCoins = 50
     println(experiencePoints)
