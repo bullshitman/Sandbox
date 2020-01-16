@@ -20,6 +20,7 @@ fun main(args: Array<String>) {
     val lootBoxOne: LootBox<Fedora> = LootBox(Fedora("a generic-looking fedora", 15),
                                               Fedora("a drizzle magenta fedora", 25))
     val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
+
     lootBoxOne.open = true
     lootBoxOne.fetch(1)?.run {
         println("You retrieve $name from the box!")
