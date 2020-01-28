@@ -9,7 +9,6 @@ class LootBox<T : Loot>(vararg item: T) {
         return lootModFunction(loot[item]).takeIf { open }
     }
 }
-
 open class Loot(val value: Int)
 
 class Fedora(val name: String, value: Int) : Loot(value)
