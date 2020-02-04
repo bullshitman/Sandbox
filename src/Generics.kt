@@ -4,6 +4,7 @@ class LootBox<T : Loot>(vararg item: T) {
     fun fetch(item: Int): T? {
         return loot[item].takeIf{open}
     }
+
     operator fun get(index: Int): T? = loot[index].takeIf {open}
     fun <R> fetch(item: Int, lootModFunction: (T) -> R):R? {
         return lootModFunction(loot[item]).takeIf { open }
