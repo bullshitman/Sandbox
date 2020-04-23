@@ -1,13 +1,16 @@
-const val PLAYER_NAME: String = "Estragon"
-const val PUBS_NAME: String = "Unicorn's horn"
-const val MAX_EXPIRIENCE:Int = 5000
-val AVAILABLE_STEED: List<String> = listOf("dragon", "minotaur")
-val AVAILABLE_DRINKS: List<String> = listOf("wine", "mead", "lacroix")
-
+const val MAX_EXPERIENCE: Int = 5000
+const val TAVERNS_NAME = "Unicorn's Horn"
 fun main(args: Array<String>) {
-    var experiencePoints = 5
-    var availableCoins = 50
-    println(experiencePoints)
-    println(PUBS_NAME)
-    println(PLAYER_NAME.reversed())
+    val playerName = "Estragon"
+    var hasSteed = false
+    var experiencePoint = 5
+    var menu = listOf<String>("Wine", "Beer", "Honey")
+    var playerCoins = 50
+    experiencePoint += 5
+    println(experiencePoint)
+    println(playerName)
+    println(playerName.reversed())
+    for (item in menu){
+        println(item)
+    }
 }
