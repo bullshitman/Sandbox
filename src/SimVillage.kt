@@ -1,21 +1,24 @@
-fun main(args: Array<String>) {
+fun main() {
     runSimulation()
 }
-inline fun runSimulation(){
+
+fun runSimulation() {
     val greetingFunction = configureGreetingFunction()
     println(greetingFunction("Guyal"))
 }
-fun printConstructionCost (numBuildings: Int){
-    val cost = 500
-    println("construction costs: ${cost * numBuildings}")
+
+fun printConstructionCost(numBuildings: Int) {
+    val cost = 50
+    println("construction cost: ${cost * numBuildings}")
 }
-fun configureGreetingFunction(): (String) -> String{
-    val structureType = "hospital"
+
+fun configureGreetingFunction(): (String) -> String {
+    val structureType = "hospitals"
     var numBuildings = 5
-    return {playerName: String ->
-        val currentYear = 2019
-        numBuildings +=1
+    return { playerName: String ->
+        val currentYear = 2018
+        numBuildings += 1
         println("Adding $numBuildings $structureType")
-        "Welcome to SimVillage, $playerName! Copyright($currentYear)"
+        "Welcome to SimVillage, $playerName! (copyright $currentYear)"
     }
 }
